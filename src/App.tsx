@@ -17,36 +17,40 @@ function App() {
           <p>Dear @Labtrone</p> <br/><br/>
           <p>We would like to update you with regards to your order.</p><br/>
           <p>
-            There was a delay due to the festive season holidays that started <br/><br/>
-            on the 23rd of December to the 13th of January. This led to a halt in manufacturing. Your order will be ready for shipping on 
+            There was a delay due to the festive season holidays that started
+            on the 16th of December to the 13th of January, this led to a halt in manufacturing. <br/> <br/>  Your order will be ready for shipping on 
             March 20, 2025
           </p><br/>
           <p>We apologize for any inconvenience.</p>
           <br />
           <p>Best Regards,</p><br/><br/>
 
-          Fisher Scientific UK Ltd <br />
-          <span >
-            Bishop Meadow Road<br />
-            Loughborough<br />
-            Leicestershire<br />
-            LE11 5RG UK<br />
-            GREAT BRITAIN
-          </span><br /><br />
-          <p>Phone: +441509555500</p>
-          <p>
-            Email: <a href="mailto:FisherUK.Quotations@thermofisher.com" style={{ color: "#00acff" }}>FisherUK.Quotations@thermofisher.com</a>
-          </p>
+          <h3 className='font-bold text-lg'>Henry Mbote</h3>
+
+          <span>
+            Area Sales Manager, East Africa <br/>
+
+            Fisher Scientific<br/><br/>
+
+            Thermo Fisher Scientific <br/>
+
+            Mobile: +254 733 252 532<br/>
+
+            <p>
+              <a href="henry.mbote@thermofisher.com | fishersci.co.uk" style={{ color: "#00acff" }}>henry.mbote@thermofisher.com | fishersci.co.uk</a>
+            </p>
+          </span>
+          <br/>
           <p>
             Website: <a href="https://www.fishersci.co.uk" style={{ color: "#00acff" }}>www.fishersci.co.uk</a> <br /><br />
           </p>
-          <p style={{ color: "#00acff" }}>All sales are subject to the following terms of sale</p> <br /><br />
+          {/* <p style={{ color: "#00acff" }}>All sales are subject to the following terms of sale</p> <br /><br />
           
           <p className='text-[12px]'> WORLDWIDE CONFIDENTIALITY NOTE: </p>
           <p className='text-[12px]'>Dissemination, distribution or copying of this email or the information herein by anyone other than the intended recipient, <br/>
             or an employee or agent of a system responsible for delivering the message to the intended recipient, is prohibited.<br/>
             If you are not the intended recipient, please inform the sender and delete all copies.
-          </p>
+          </p> */}
         </div>
       )
     }
@@ -160,14 +164,14 @@ function App() {
 
         <div className="flex-1 flex-col">
           {/* Email List */}
-          <div className="w-[auto] border-[#2d363a] overflow-y-auto">
+          <div className="w-[auto] py-2 border-[#2d363a] overflow-y-auto">
             {emails.map((email) => (
               <div
                 key={email.id}
                 className="px-4 py-3 border-b border-[#2d363a] cursor-pointer hover:bg-[#2d363a]"
                 onClick={() => setSelectedEmail(email.id)}
               >
-                <div className="font-medium text-lg mb-1">{email.subject}</div>
+                <div className="font-extrabold text-gray-300 text-lg mb-2">{email.subject}</div>
                 <div className='flex'> 
                   <img
                     src={SvgUser}
@@ -175,7 +179,7 @@ function App() {
                     className="w-10  h-10 mr-3 course-pointer"
                   />
                   <div className='flex-col'>
-                    <div className='text-xs text-gray-300'> From <span className='text-[#00acff]'>{emails[selectedEmail].from}</span> on <span>{emails[selectedEmail].date}</span></div>
+                    <div className='text-xs text-gray-300'> From <span className='text-[#00acff]'>{emails[selectedEmail].from}</span> <br/>  on <span>{emails[selectedEmail].date}</span></div>
                     <div className='flex gap-2 mt-1 text-xs '>
                       <span className="text-[#00acff] flex gap-1"> <Mail className='stroke-2 w-3 h-4'/>  Details</span>
                       <span className="text-[#00acff] flex gap-1"> <Info className='stroke-2 w-3 h-4'/> Headers</span>
